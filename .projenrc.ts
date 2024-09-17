@@ -3,10 +3,10 @@ const project = new typescript.TypeScriptAppProject({
   defaultReleaseBranch: 'main',
   name: 'config-kitty',
   projenrcTs: true,
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  autoDetectBin: true,
+  license: 'MIT',
+  authorName: 'superluminar GmbH',
+  deps: ['@inquirer/prompts'], /* Runtime dependencies of this module. */
+  description: 'ConfigKitty: Purrfect eslint/prettier setup for your CDK codebase',
 });
 project.synth();

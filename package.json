@@ -1,5 +1,9 @@
 {
   "name": "config-kitty",
+  "description": "ConfigKitty: Purrfect eslint/prettier setup for your CDK codebase",
+  "bin": {
+    "config-kitty": "bin/config-kitty"
+  },
   "scripts": {
     "build": "npx projen build",
     "clobber": "npx projen clobber",
@@ -17,6 +21,10 @@
     "watch": "npx projen watch",
     "projen": "npx projen"
   },
+  "author": {
+    "name": "superluminar GmbH",
+    "organization": false
+  },
   "devDependencies": {
     "@types/jest": "^29.5.13",
     "@types/node": "^18",
@@ -33,7 +41,10 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
-  "license": "Apache-2.0",
+  "dependencies": {
+    "@inquirer/prompts": "^6.0.1"
+  },
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
