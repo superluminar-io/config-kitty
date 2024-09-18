@@ -4,6 +4,16 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import { confirm } from '@inquirer/prompts';
 
+const checkPrerequisites = () => {
+  // see if typescript is installed
+  try {
+    execSync('tsc --version');
+  } catch (err) {
+    console.error('TypeScript is not installed. Make sure to run this in a project that has Typescript set up..');
+    process.exit(1);
+  }
+};
+
 const createConfigFiles = () => {
 // Create .eslintrc.js
   const eslintrc = `
@@ -87,6 +97,7 @@ const installDependencies = () => {
     'eslint-config-prettier',
     'eslint-plugin-prettier',
     'eslint-config-standard',
+    '@typescript-eslint/eslint-plugin',
   ];
 
   console.log(`Installing dependencies using ${packageManager}...`);
@@ -99,6 +110,7 @@ confirm({
 },
 ).then(answer => {
   if (answer) {
+    checkPrerequisites();
     createConfigFiles();
     installDependencies();
   } else {
