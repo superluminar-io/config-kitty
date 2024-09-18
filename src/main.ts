@@ -87,10 +87,11 @@ insert_final_newline = true
 const installDependencies = () => {
 // Detect npm or Yarn
   const userAgent = process.env.npm_config_user_agent;
+  const isPnpm = userAgent?.includes('pnpm');
   const isYarn = userAgent?.includes('yarn');
-  const packageManager = isYarn ? 'yarn' : 'npm';
+  const packageManager = isPnpm ? 'pnpm' : isYarn ? 'yarn' : 'npm';
 
-  const installCmd = isYarn ? 'yarn add' : 'npm install --save-dev';
+  const installCmd = isPnpm ? 'pnpm add -D' : isYarn ? 'yarn add' : 'npm install --save-dev';
   const packages = [
     'eslint',
     'prettier',
