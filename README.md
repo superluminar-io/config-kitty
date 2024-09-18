@@ -11,46 +11,16 @@ No more scratching your head over setup—ConfigKitty makes it as smooth as a ki
 - **Interactive**: ConfigKitty will ask for your permission before making any changes, keeping you in control at all times.
 - **No headaches with projen**: ConfigKitty just creates configuration files and installs dependencies, leaving your setup untouched.
 
-## 🛠️ Installation
-
-Since ConfigKitty isn't on npm just yet, here's how you can try it out locally:
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/yourusername/config-kitty.git
-   cd config-kitty
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Build the project:
-
-   ```bash
-   npm run build
-   ```
-
-4. Link it globally:
-
-   ```bash
-   npm link
-   ```
-
-Now you’re ready to roll with ConfigKitty! 🐾
-
 ## 🎉 Usage
 
-To summon ConfigKitty and let it work its magic, just run:
+To summon ConfigKitty 🐾 and let it work its magic, just run:
 
 ```bash
-npx config-kitty
+npx @superluminar-io/config-kitty
 ```
 
 ConfigKitty will ask if you want to proceed. Just give it the go-ahead, and watch as your configuration files and dependencies are set up in a flash!
+Commit the result and you're good to go!
 
 ## 📦 What Does It Do?
 
