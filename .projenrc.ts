@@ -16,5 +16,6 @@ const project = new typescript.TypeScriptProject({
   release: true,
   package: true,
   npmAccess: NpmAccess.PUBLIC,
+  repository: 'https://github.com/superluminar-io/config-kitty.git',
 });
 project.synth();

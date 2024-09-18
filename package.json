@@ -1,6 +1,10 @@
 {
   "name": "@superluminar-io/config-kitty",
   "description": "ConfigKitty: Purrfect eslint/prettier setup for your CDK codebase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superluminar-io/config-kitty.git"
+  },
   "bin": {
     "config-kitty": "bin/config-kitty"
   },
